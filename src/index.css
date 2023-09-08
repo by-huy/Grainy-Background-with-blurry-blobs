@@ -17,3 +17,29 @@
 * {
   /* border: 1px solid red; */
 }
+
+@layer utilities {
+  .animation-delay-1 {
+    animation-delay: 2s;
+  }
+
+  .animation-delay-2 {
+    animation-delay: 3s;
+  }
+}
+
+body::before,
+body::after {
+  position: absolute;
+  left: 0;
+  top: 0;
+  content: '';
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 20%;
+}
+
+body::before {
+  filter: url(#grainy);
+}

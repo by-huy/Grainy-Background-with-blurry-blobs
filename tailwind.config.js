@@ -6,6 +6,17 @@ export default {
   ],
   theme: {
     extend: {
+      animation: {
+        blob: 'blob 7s infinite'
+      },
+      keyframes: {
+        blob: {
+          '0%': {transform: "translate(0px, 0px)"},
+          '33%': {transform: "translate(-100px, -40px)"},
+          '66%': {transform: "translate(100px, 20px)"},
+          '100%': {transform: "translate(0px, 0px)"},
+        }
+      },
       fontFamily: {
         'ranade': ['Ranade-Variable', 'sans-serif'],
         'switzer': ['Switzer-Variable', 'sans-serif']
